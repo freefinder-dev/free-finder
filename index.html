@@ -7,15 +7,14 @@
 <meta name="description" content="Find genuinely useful free alternatives to paid AI and software tools. Compare free access, limits and the catch.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#07080c">
-<link rel="canonical" href="https://free-findererer.example/">
+<link rel="canonical" href="https://dharmadinu1234-hue.github.io/free-finder/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Free Finder — Find a free alternative">
 <meta property="og:description" content="Discover free and genuinely usable alternatives to paid AI and software tools.">
-<meta property="og:url" content="https://free-findererer.example/">
+<meta property="og:url" content="https://dharmadinu1234-hue.github.io/free-finder/">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"Free Finder","url":"https://free-findererer.example/","description":"Find free alternatives to paid AI and software tools."}
+{"@context":"https://schema.org","@type":"WebSite","name":"Free Finder","url":"https://dharmadinu1234-hue.github.io/free-finder/","description":"Find free alternatives to paid AI and software tools."}
 </script>
-<meta name="description" content="Find genuinely useful free alternatives to paid AI and software tools.">
 <style>
 :root{
   --bg:#07080c; --panel:#10121a; --panel2:#151824; --text:#f6f7fb;
@@ -43,7 +42,8 @@ h1{font-size:clamp(42px,7vw,76px);line-height:.98;letter-spacing:-4px;margin:20p
 .searchbox button{min-width:190px}
 .chips{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:18px}
 .chip{border:1px solid var(--line);background:#0e1017;color:#b8becd;border-radius:999px;padding:8px 12px;font-size:12px;cursor:pointer}
-.chip:hover{border-color:#464c61;color:white}
+.chip:hover,.chip:focus-visible{border-color:#464c61;color:white}
+.card[role="button"]:focus-visible,.btn:focus-visible,a:focus-visible{outline:2px solid var(--accent2);outline-offset:3px}
 .section{padding:38px 0}.sectionhead{display:flex;justify-content:space-between;align-items:end;margin-bottom:18px}
 h2{font-size:25px;letter-spacing:-1px;margin:0}.muted{color:var(--muted)}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -63,15 +63,15 @@ h2{font-size:25px;letter-spacing:-1px;margin:0}.muted{color:var(--muted)}
 .num{font-size:12px;color:#9f96ff;font-weight:800}.step h3{margin:8px 0}.step p{font-size:13px;line-height:1.55;color:var(--muted)}
 footer{border-top:1px solid var(--line);margin-top:45px;padding:28px 0;color:#777e90;font-size:12px}
 .empty{text-align:center;padding:30px;color:var(--muted)}
-@media(max-width:800px){.grid,.how{grid-template-columns:1fr}.navlinks{display:none}.hero{padding-top:50px}h1{letter-spacing:-2.5px}.searchbox{flex-direction:column}.searchbox button{width:100%}.alt{grid-template-columns:1fr 1fr}.alt .hide-mobile{display:none}}
+@media(max-width:800px){.grid,.how{grid-template-columns:1fr}.navlinks{display:none}.hero{padding-top:50px}h1{letter-spacing:-2.5px;font-size:clamp(38px,12vw,60px)}.searchbox{flex-direction:column}.searchbox button{width:100%}.alt{grid-template-columns:1fr}.alt .hide-mobile{display:none}.resulttop{flex-direction:column}.container{padding:0 16px}}
 </style>
 </head>
 <body>
 <div class="container">
 <nav>
-  <a class="logo" href="#">Free<span>Find</span></a>
+  <a class="logo" href="./" aria-label="Free Finder home">Free <span>Finder</span></a>
   <div class="navlinks"><a href="#categories">Categories</a><a href="#how">How it works</a><a href="#tools">Popular tools</a></div>
-  <button class="btn" onclick="alert('Community submissions are coming in the next version.')">Suggest a tool</button>
+  <a class="btn" href="https://github.com/dharmadinu1234-hue/free-finder/issues/new" target="_blank" rel="noopener noreferrer">Suggest a tool</a>
 </nav>
 
 <section class="hero">
@@ -106,24 +106,24 @@ footer{border-top:1px solid var(--line);margin-top:45px;padding:28px 0;color:#77
 <section class="section" id="categories">
   <div class="sectionhead"><div><h2>What are you trying to do?</h2><div class="muted" style="margin-top:5px;font-size:13px">Search by job, not just by brand.</div></div></div>
   <div class="grid">
-    <div class="card" onclick="setSearch('AI chat')"><div class="icon">AI</div><h3>AI Chat</h3><p>Chatbots, reasoning, brainstorming and everyday assistants.</p><div class="meta"><span class="tag free">Free tiers</span><span class="tag">Popular</span></div></div>
-    <div class="card" onclick="setSearch('AI image')"><div class="icon">✦</div><h3>Image generation</h3><p>Create images, concepts, thumbnails and visual assets.</p><div class="meta"><span class="tag free">Free options</span></div></div>
-    <div class="card" onclick="setSearch('AI video')"><div class="icon">▶</div><h3>Video</h3><p>Find tools for generation, editing, captions and short-form content.</p><div class="meta"><span class="tag limited">Limits vary</span></div></div>
-    <div class="card" onclick="setSearch('AI coding')"><div class="icon">&lt;/&gt;</div><h3>Coding</h3><p>AI coding assistants, agents, autocomplete and developer tools.</p><div class="meta"><span class="tag free">Free tiers</span></div></div>
-    <div class="card" onclick="setSearch('research tool')"><div class="icon">⌕</div><h3>Research</h3><p>Search, citations, document Q&A and knowledge discovery.</p><div class="meta"><span class="tag free">Free options</span></div></div>
-    <div class="card" onclick="setSearch('writing')"><div class="icon">Aa</div><h3>Writing</h3><p>Rewrite, summarize, grammar, copy and long-form writing.</p><div class="meta"><span class="tag">Students</span></div></div>
+    <div class="card" role="button" tabindex="0" onclick="setSearch('AI chat')" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){setSearch('AI chat')}"><div class="icon">AI</div><h3>AI Chat</h3><p>Chatbots, reasoning, brainstorming and everyday assistants.</p><div class="meta"><span class="tag free">Free tiers</span><span class="tag">Popular</span></div></div>
+    <div class="card" role="button" tabindex="0" onclick="setSearch('AI image')" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){setSearch('AI image')}"><div class="icon">✦</div><h3>Image generation</h3><p>Create images, concepts, thumbnails and visual assets.</p><div class="meta"><span class="tag free">Free options</span></div></div>
+    <div class="card" role="button" tabindex="0" onclick="setSearch('AI video')" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){setSearch('AI video')}"><div class="icon">▶</div><h3>Video</h3><p>Find tools for generation, editing, captions and short-form content.</p><div class="meta"><span class="tag limited">Limits vary</span></div></div>
+    <div class="card" role="button" tabindex="0" onclick="setSearch('AI coding')" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){setSearch('AI coding')}"><div class="icon">&lt;/&gt;</div><h3>Coding</h3><p>AI coding assistants, agents, autocomplete and developer tools.</p><div class="meta"><span class="tag free">Free tiers</span></div></div>
+    <div class="card" role="button" tabindex="0" onclick="setSearch('research tool')" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){setSearch('research tool')}"><div class="icon">⌕</div><h3>Research</h3><p>Search, citations, document Q&A and knowledge discovery.</p><div class="meta"><span class="tag free">Free options</span></div></div>
+    <div class="card" role="button" tabindex="0" onclick="setSearch('writing')" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){setSearch('writing')}"><div class="icon">Aa</div><h3>Writing</h3><p>Rewrite, summarize, grammar, copy and long-form writing.</p><div class="meta"><span class="tag">Students</span></div></div>
   </div>
 </section>
 
 <section class="section" id="tools">
-  <div class="sectionhead"><div><h2>Popular free picks</h2><div class="muted" style="margin-top:5px;font-size:13px">Starter database for the prototype.</div></div></div>
+  <div class="sectionhead"><div><h2>Popular free picks</h2><div class="muted" style="margin-top:5px;font-size:13px">Starter directory — always verify current plans with the provider.</div></div></div>
   <div class="grid">
-    <div class="card"><div class="icon">G</div><h3>Google Gemini</h3><p>General AI assistant with a free consumer tier. Good all-round alternative for everyday AI tasks.</p><div class="meta"><span class="tag free">Free tier</span><span class="tag">Chat</span><span class="tag">Research</span></div></div>
-    <div class="card"><div class="icon">C</div><h3>Claude</h3><p>Strong option for writing, reasoning and document-focused work with a free tier.</p><div class="meta"><span class="tag free">Free tier</span><span class="tag">Writing</span></div></div>
-    <div class="card"><div class="icon">P</div><h3>Perplexity</h3><p>Research-oriented AI search with a free tier and cited answers.</p><div class="meta"><span class="tag free">Free tier</span><span class="tag">Research</span></div></div>
-    <div class="card"><div class="icon">GH</div><h3>GitHub Copilot</h3><p>AI coding assistance with a free plan for developers.</p><div class="meta"><span class="tag free">Free plan</span><span class="tag">Coding</span></div></div>
-    <div class="card"><div class="icon">HF</div><h3>Hugging Face</h3><p>Large ecosystem of open models, demos and developer tools with free access options.</p><div class="meta"><span class="tag free">Free options</span><span class="tag">Open source</span></div></div>
-    <div class="card"><div class="icon">D</div><h3>DeepSeek</h3><p>AI assistant with a free chat offering, useful for general questions and reasoning.</p><div class="meta"><span class="tag free">Free access</span><span class="tag">Chat</span></div></div>
+    <a class="card" href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer"><div class="icon">G</div><h3>Google Gemini</h3><p>General AI assistant for everyday questions, writing and research.</p><div class="meta"><span class="tag free">Free access</span><span class="tag">Chat</span><span class="tag">Research</span></div></a>
+    <a class="card" href="https://claude.ai/" target="_blank" rel="noopener noreferrer"><div class="icon">C</div><h3>Claude</h3><p>AI assistant for writing, reasoning and document-focused work.</p><div class="meta"><span class="tag free">Free access</span><span class="tag">Writing</span></div></a>
+    <a class="card" href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer"><div class="icon">P</div><h3>Perplexity</h3><p>Research-oriented AI search with cited answers.</p><div class="meta"><span class="tag free">Free access</span><span class="tag">Research</span></div></a>
+    <a class="card" href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer"><div class="icon">GH</div><h3>GitHub Copilot</h3><p>AI coding assistance for developers.</p><div class="meta"><span class="tag free">Free options</span><span class="tag">Coding</span></div></a>
+    <a class="card" href="https://huggingface.co/" target="_blank" rel="noopener noreferrer"><div class="icon">HF</div><h3>Hugging Face</h3><p>Open-model ecosystem, demos and developer tools.</p><div class="meta"><span class="tag free">Free options</span><span class="tag">Open source</span></div></a>
+    <a class="card" href="https://chat.deepseek.com/" target="_blank" rel="noopener noreferrer"><div class="icon">D</div><h3>DeepSeek</h3><p>AI chat and reasoning service.</p><div class="meta"><span class="tag free">Free access</span><span class="tag">Chat</span></div></a>
   </div>
 </section>
 
@@ -136,75 +136,52 @@ footer{border-top:1px solid var(--line);margin-top:45px;padding:28px 0;color:#77
   </div>
 </section>
 
+<section class="section legal" id="about">
+  <div class="resultbox"><h2>About Free Finder</h2><p class="muted">Free Finder helps people discover useful free or free-tier alternatives to paid AI and software tools. We aim to explain limits clearly instead of calling trials or tiny credits “free”.</p></div>
+</section>
+<section class="section legal" id="privacy">
+  <div class="resultbox"><h2>Privacy</h2><p class="muted">This site does not require an account. Search queries are processed in your browser. When you follow an external tool link, that provider's own privacy policy applies.</p></div>
+</section>
+<section class="section legal" id="terms">
+  <div class="resultbox"><h2>Terms</h2><p class="muted">Free Finder provides software-discovery information for general informational purposes. Prices, limits, availability and features can change. Verify important details on the provider's current official website.</p></div>
+</section>
 <footer>
   <div style="margin-bottom:14px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
-    <a href="#" onclick="showExtra('about');return false">About</a>
-    <a href="#" onclick="showExtra('privacy');return false">Privacy</a>
-    <a href="#" onclick="showExtra('terms');return false">Terms</a>
-    <a href="#" onclick="showExtra('contact');return false">Suggest a tool</a>
+    <a href="#about">About</a><a href="#privacy">Privacy</a><a href="#terms">Terms</a><a href="https://github.com/dharmadinu1234-hue/free-finder/issues/new" target="_blank" rel="noopener noreferrer">Suggest a tool</a>
   </div>
-  <div style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap">
-    <div>© 2026 Free Finder. Prototype.</div>
-    <div>Free doesn't mean unlimited. Verify current plan details before use.</div>
-  </div>
+  <div style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap"><div>© 2026 Free Finder.</div><div>Free doesn't mean unlimited. Verify current plan details before use.</div></div>
 </footer>
-</div>
-
 <script>
 const db = [
- {name:"Google Gemini", category:"chat", detail:"Free consumer tier", why:"Strong all-round free option", tags:["Chat","Research"]},
- {name:"Claude", category:"writing", detail:"Free tier", why:"Excellent for writing and reasoning", tags:["Writing","Chat"]},
- {name:"Perplexity", category:"research", detail:"Free tier", why:"Useful for research and cited search", tags:["Research","Search"]},
- {name:"GitHub Copilot", category:"coding", detail:"Free plan", why:"AI coding assistance", tags:["Coding","Developer"]},
- {name:"Hugging Face", category:"coding", detail:"Free options", why:"Open-model ecosystem and demos", tags:["Open source","AI"]},
- {name:"DeepSeek", category:"chat", detail:"Free chat access", why:"General chat and reasoning", tags:["Chat","Reasoning"]}
+ {name:"Google Gemini", category:"chat", detail:"Free access", why:"General-purpose AI assistant", tags:["Chat","Research"], url:"https://gemini.google.com/"},
+ {name:"Claude", category:"writing", detail:"Free access", why:"Writing and reasoning assistant", tags:["Writing","Chat"], url:"https://claude.ai/"},
+ {name:"Perplexity", category:"research", detail:"Free access", why:"Research-focused AI search", tags:["Research","Search"], url:"https://www.perplexity.ai/"},
+ {name:"GitHub Copilot", category:"coding", detail:"Free options", why:"AI coding assistance", tags:["Coding","Developer"], url:"https://github.com/features/copilot"},
+ {name:"Hugging Face", category:"coding", detail:"Free options", why:"Open-model ecosystem and demos", tags:["Open source","AI"], url:"https://huggingface.co/"},
+ {name:"DeepSeek", category:"chat", detail:"Free access", why:"General chat and reasoning", tags:["Chat","Reasoning"], url:"https://chat.deepseek.com/"}
 ];
-function setSearch(v){document.getElementById('search').value=v;findAlternatives();window.scrollTo({top:0,behavior:'smooth'})}
+function setSearch(v){const input=document.getElementById('search');input.value=v;findAlternatives();document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'})}
+function escapeHtml(value){return String(value).replace(/[&<>\'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
 function findAlternatives(){
  const q=document.getElementById('search').value.trim();
- if(!q)return;
+ if(!q){document.getElementById('search').focus();return;}
  const lower=q.toLowerCase();
- let matches=db.filter(x=>x.category && lower.includes(x.category));
- if(lower.includes('video')) matches=[{name:"Free video tools",category:"video",detail:"Research needed",why:"Video free tiers change quickly; this category is flagged for verification.",tags:["Video"]}];
- if(lower.includes('image')||lower.includes('midjourney')) matches=[{name:"Free image options",category:"image",detail:"Free options vary",why:"Use the database to compare current generation limits and watermarks.",tags:["Image"]}];
+ let matches=db.filter(x=>lower.includes(x.category));
+ if(lower.includes('video')) matches=[{name:"Video tools",category:"video",detail:"Compare current plans",why:"Video limits and watermarks change frequently",tags:["Video"],url:"https://www.canva.com/"}];
+ if(lower.includes('image')||lower.includes('midjourney')) matches=[{name:"Hugging Face",category:"image",detail:"Free options",why:"Explore open image models and demos",tags:["Image","Open source"],url:"https://huggingface.co/spaces"}];
  if(lower.includes('chatgpt')||lower.includes('chat')) matches=db.filter(x=>x.category==="chat");
  if(!matches.length) matches=db.slice(0,4);
  document.getElementById('resultTitle').textContent=q;
  document.getElementById('resultRows').innerHTML=matches.map(x=>`
  <div class="alt">
-   <div><strong>${x.name}</strong><div class="muted" style="font-size:11px;margin-top:3px">${x.why}</div></div>
-   <div><span class="pill">${x.detail}</span></div>
-   <div class="hide-mobile">${x.tags.join(" · ")}</div>
-   <button class="btn" onclick="alert('In the full version this will open the verified tool profile.')">View</button>
+   <div><strong>${escapeHtml(x.name)}</strong><div class="muted" style="font-size:11px;margin-top:3px">${escapeHtml(x.why)}</div></div>
+   <div><span class="pill">${escapeHtml(x.detail)}</span></div>
+   <div class="hide-mobile">${escapeHtml(x.tags.join(" · "))}</div>
+   <a class="btn" href="${x.url}" target="_blank" rel="noopener noreferrer">Visit</a>
  </div>`).join('');
  document.getElementById('result').classList.add('show');
 }
 document.getElementById('search').addEventListener('keydown',e=>{if(e.key==='Enter')findAlternatives()});
-</script>
-
-<style>
-.extra-page{display:none;max-width:850px;margin:30px auto;padding:26px;border:1px solid var(--line);border-radius:18px;background:#10131b;text-align:left}
-.extra-page h1{font-size:42px;letter-spacing:-2px}.extra-page h2{margin-top:28px}.extra-page p,.extra-page li{color:var(--muted);line-height:1.7}
-.extra-page input,.extra-page textarea{width:100%;padding:12px;margin:8px 0 14px;background:#11151e;border:1px solid #303747;border-radius:10px;color:white}
-</style>
-<div id="extra" class="extra-page"></div>
-<script>
-const extraPages={
-about:`<h1>About Free Finder</h1><p>Free Finder is a discovery platform for people who want useful alternatives without immediately paying for a subscription.</p><h2>Our promise</h2><p>We aim to separate genuinely usable free plans from trials, tiny credit allowances and misleading “free” labels.</p><h2>Verification</h2><p>Pricing, limits and features change. A production directory should show the last verified date and link to the provider's official information.</p>`,
-privacy:`<h1>Privacy Policy</h1><p>This prototype does not require an account and processes its search locally in your browser.</p><h2>Third-party sites</h2><p>When you follow a tool link, that provider's own privacy policy applies.</p>`,
-terms:`<h1>Terms of Use</h1><p>Free Finder provides software discovery information for general informational purposes. Free plans, prices, limits and features can change.</p><h2>Verify before relying</h2><p>Confirm important pricing, licensing, privacy and availability on the provider's current official website.</p>`,
-contact:`<h1>Suggest a tool</h1><p>Found a useful free alternative or an outdated entry?</p><form onsubmit="event.preventDefault();this.innerHTML='<p style=color:#8de6b5>Thanks! Your suggestion was received in this prototype. A production version will send it to the Free Finder review inbox.</p>'"><input required placeholder="Tool name"><textarea required placeholder="Why is it useful / what changed?"></textarea><button class="btn primary">Send suggestion</button></form>`
-};
-function showExtra(k){
- document.querySelector('.hero').style.display='none';
- document.querySelectorAll('.section').forEach(x=>x.style.display='none');
- const e=document.getElementById('extra');e.innerHTML=extraPages[k]+'<p><button class="btn" onclick="hideExtra()">← Back to Free Finder</button></p>';e.style.display='block';scrollTo({top:0,behavior:'smooth'})
-}
-function hideExtra(){
- document.querySelector('.hero').style.display='';
- document.querySelectorAll('.section').forEach(x=>x.style.display='');
- document.getElementById('extra').style.display='none';scrollTo({top:0,behavior:'smooth'})
-}
 </script>
 </body>
 </html>

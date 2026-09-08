@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dharmadinu1234-hue.github.io/free-finder/sitemap.xml
